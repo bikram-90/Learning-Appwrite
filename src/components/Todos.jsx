@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { databases } from "../appwrite/appwriteConfig";
-import { Query } from "appwrite";
+import conf from "../conf/conf.js";
 
 function Todos() {
   const [todos, setTodos] = useState();
@@ -27,8 +27,8 @@ function Todos() {
   const deleteTodo = (id) => {
     console.log(id);
     const promise = databases.deleteDocument(
-      "673204df000a5683bcf9",
-      "673205480007371f450e",
+      conf.appwriteDatabaseId,
+      conf.appwriteCollectionId,
       id
     );
     promise.then(
