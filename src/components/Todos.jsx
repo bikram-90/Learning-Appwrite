@@ -27,8 +27,8 @@ function Todos() {
   const deleteTodo = (id) => {
     console.log(id);
     const promise = databases.deleteDocument(
-      "6730c022000fe0dcca18",
-      "6730c02e0016440515ad",
+      "673204df000a5683bcf9",
+      "673205480007371f450e",
       id
     );
     promise.then(
@@ -56,7 +56,7 @@ function Todos() {
                 <div className="p-4 flex items-center justify-between border-b-2 bg-gray-100 rounded-lg mb-1">
                   <div>
                     {/* <p>{item.$id}</p> */}
-                    <p>{item.Todo}</p>
+                    <p>{item.Name}</p>
                   </div>
                   <div>
                     <span
