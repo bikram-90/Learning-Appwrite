@@ -9,8 +9,8 @@ function Todos() {
   useEffect(() => {
     setLoader(true);
     const getTodos = databases.listDocuments(
-      "6730c022000fe0dcca18",
-      "6730c02e0016440515ad"
+      conf.appwriteDatabaseId,
+      conf.appwriteCollectionId
     );
 
     getTodos.then(
