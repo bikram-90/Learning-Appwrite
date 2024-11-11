@@ -8,11 +8,11 @@ function TodoForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const promise = databases.createDocument(
-      "6730c022000fe0dcca18",
-      "6730c02e0016440515ad",
+      "673204df000a5683bcf9",
+      "673205480007371f450e",
       uuidv4(),
       {
-        Todo: todo,
+        Name: todo,
       }
     );
     console.log(promise);
